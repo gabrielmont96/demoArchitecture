@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		53F607B023D6281600F6027F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F607AF23D6281600F6027F /* AppDelegate.swift */; };
 		53F607B223D6281600F6027F /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F607B123D6281600F6027F /* CarViewController.swift */; };
-		53F607B523D6281600F6027F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F607B323D6281600F6027F /* Main.storyboard */; };
 		53F607B723D6281800F6027F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F607B623D6281800F6027F /* Assets.xcassets */; };
 		53F607BA23D6281800F6027F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F607B823D6281800F6027F /* LaunchScreen.storyboard */; };
 		53F607C523D6281800F6027F /* DemoMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F607C423D6281800F6027F /* DemoMVVMTests.swift */; };
 		53F607E223D62CDD00F6027F /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F607E123D62CDD00F6027F /* Car.swift */; };
 		53F607E423D631DD00F6027F /* RegisterCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F607E323D631DD00F6027F /* RegisterCarViewController.swift */; };
 		53F607E623D646DE00F6027F /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F607E523D646DE00F6027F /* CarViewModel.swift */; };
+		942125A523DB4FEE00019ABB /* CarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942125A323DB4FEE00019ABB /* CarViewController.xib */; };
+		942125AB23DB505600019ABB /* RegisterCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942125A923DB505600019ABB /* RegisterCarViewController.xib */; };
+		9460B3B923D8878E004E8E06 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460B3B823D8878E004E8E06 /* AppCoordinator.swift */; };
+		9460B3BB23D8884B004E8E06 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460B3BA23D8884B004E8E06 /* BaseCoordinator.swift */; };
+		9460B3BD23D8891A004E8E06 /* CarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460B3BC23D8891A004E8E06 /* CarCoordinator.swift */; };
+		9460B3BF23D88A64004E8E06 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460B3BE23D88A64004E8E06 /* Coordinator.swift */; };
+		9460B3C823D88B8F004E8E06 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460B3C723D88B8F004E8E06 /* LoginCoordinator.swift */; };
+		9460B3CB23D88BE2004E8E06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460B3C923D88BE2004E8E06 /* LoginViewController.swift */; };
+		9460B3CC23D88BE2004E8E06 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9460B3CA23D88BE2004E8E06 /* LoginViewController.xib */; };
+		9460B3CE23D88BEA004E8E06 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460B3CD23D88BEA004E8E06 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +48,6 @@
 		53F607AC23D6281600F6027F /* DemoMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F607AF23D6281600F6027F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F607B123D6281600F6027F /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
-		53F607B423D6281600F6027F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53F607B623D6281800F6027F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53F607B923D6281800F6027F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53F607BB23D6281800F6027F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +58,16 @@
 		53F607E123D62CDD00F6027F /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		53F607E323D631DD00F6027F /* RegisterCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCarViewController.swift; sourceTree = "<group>"; };
 		53F607E523D646DE00F6027F /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
+		942125A323DB4FEE00019ABB /* CarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarViewController.xib; sourceTree = "<group>"; };
+		942125A923DB505600019ABB /* RegisterCarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterCarViewController.xib; sourceTree = "<group>"; };
+		9460B3B823D8878E004E8E06 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9460B3BA23D8884B004E8E06 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		9460B3BC23D8891A004E8E06 /* CarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCoordinator.swift; sourceTree = "<group>"; };
+		9460B3BE23D88A64004E8E06 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9460B3C723D88B8F004E8E06 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		9460B3C923D88BE2004E8E06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9460B3CA23D88BE2004E8E06 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9460B3CD23D88BEA004E8E06 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +117,9 @@
 		53F607AE23D6281600F6027F /* DemoMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				53F607E023D62CB800F6027F /* Storyboards */,
-				53F607DF23D62CA100F6027F /* ViewModel */,
-				53F607DE23D62C9C00F6027F /* View */,
-				53F607DD23D62C8E00F6027F /* Model */,
+				9460B3B723D8877D004E8E06 /* Base */,
+				9460B3B623D8870A004E8E06 /* Common */,
+				9460B3B523D884F7004E8E06 /* Supporting files */,
 				53F607AF23D6281600F6027F /* AppDelegate.swift */,
 				53F607B623D6281800F6027F /* Assets.xcassets */,
 				53F607BB23D6281800F6027F /* Info.plist */,
@@ -132,6 +149,8 @@
 			children = (
 				53F607B123D6281600F6027F /* CarViewController.swift */,
 				53F607E323D631DD00F6027F /* RegisterCarViewController.swift */,
+				942125A323DB4FEE00019ABB /* CarViewController.xib */,
+				942125A923DB505600019ABB /* RegisterCarViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,13 +163,93 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		53F607E023D62CB800F6027F /* Storyboards */ = {
+		9460B3AB23D87CE4004E8E06 /* Car */ = {
 			isa = PBXGroup;
 			children = (
-				53F607B323D6281600F6027F /* Main.storyboard */,
+				9460B3B423D884E4004E8E06 /* Coordinator */,
+				53F607DF23D62CA100F6027F /* ViewModel */,
+				53F607DE23D62C9C00F6027F /* View */,
+				53F607DD23D62C8E00F6027F /* Model */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		9460B3B423D884E4004E8E06 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9460B3BC23D8891A004E8E06 /* CarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9460B3B523D884F7004E8E06 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
 				53F607B823D6281800F6027F /* LaunchScreen.storyboard */,
 			);
-			path = Storyboards;
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		9460B3B623D8870A004E8E06 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9460B3C223D88B6B004E8E06 /* Login */,
+				9460B3AB23D87CE4004E8E06 /* Car */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9460B3B723D8877D004E8E06 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9460B3B823D8878E004E8E06 /* AppCoordinator.swift */,
+				9460B3BA23D8884B004E8E06 /* BaseCoordinator.swift */,
+				9460B3BE23D88A64004E8E06 /* Coordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9460B3C223D88B6B004E8E06 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9460B3C623D88B81004E8E06 /* Coodrinator */,
+				9460B3C523D88B7A004E8E06 /* Model */,
+				9460B3C423D88B74004E8E06 /* View */,
+				9460B3C323D88B70004E8E06 /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9460B3C323D88B70004E8E06 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9460B3CD23D88BEA004E8E06 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9460B3C423D88B74004E8E06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9460B3C923D88BE2004E8E06 /* LoginViewController.swift */,
+				9460B3CA23D88BE2004E8E06 /* LoginViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9460B3C523D88B7A004E8E06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9460B3C623D88B81004E8E06 /* Coodrinator */ = {
+			isa = PBXGroup;
+			children = (
+				9460B3C723D88B8F004E8E06 /* LoginCoordinator.swift */,
+			);
+			path = Coodrinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,9 +356,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9460B3CC23D88BE2004E8E06 /* LoginViewController.xib in Resources */,
 				53F607BA23D6281800F6027F /* LaunchScreen.storyboard in Resources */,
 				53F607B723D6281800F6027F /* Assets.xcassets in Resources */,
-				53F607B523D6281600F6027F /* Main.storyboard in Resources */,
+				942125A523DB4FEE00019ABB /* CarViewController.xib in Resources */,
+				942125AB23DB505600019ABB /* RegisterCarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +385,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9460B3B923D8878E004E8E06 /* AppCoordinator.swift in Sources */,
+				9460B3BD23D8891A004E8E06 /* CarCoordinator.swift in Sources */,
+				9460B3C823D88B8F004E8E06 /* LoginCoordinator.swift in Sources */,
 				53F607B223D6281600F6027F /* CarViewController.swift in Sources */,
 				53F607B023D6281600F6027F /* AppDelegate.swift in Sources */,
 				53F607E623D646DE00F6027F /* CarViewModel.swift in Sources */,
+				9460B3BB23D8884B004E8E06 /* BaseCoordinator.swift in Sources */,
 				53F607E223D62CDD00F6027F /* Car.swift in Sources */,
+				9460B3CE23D88BEA004E8E06 /* LoginViewModel.swift in Sources */,
 				53F607E423D631DD00F6027F /* RegisterCarViewController.swift in Sources */,
+				9460B3BF23D88A64004E8E06 /* Coordinator.swift in Sources */,
+				9460B3CB23D88BE2004E8E06 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,14 +431,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		53F607B323D6281600F6027F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53F607B423D6281600F6027F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		53F607B823D6281800F6027F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

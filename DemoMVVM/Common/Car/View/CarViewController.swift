@@ -11,12 +11,15 @@ import UIKit
 class CarViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
-    var viewModel: CarViewModel = CarViewModel()
-
-    static func instantiate() -> CarViewController {
-        let viewController = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "CarViewController") as! CarViewController
-        return viewController
+    var viewModel: CarViewModel!
+    
+    init(viewModel: CarViewModel, nibName: String? = nil) {
+        self.viewModel = viewModel
+        super.init(nibName: nibName, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -27,6 +30,7 @@ class CarViewController: UIViewController {
     func setup() {
         tableView.delegate = self
         tableView.dataSource = self
+        viewModel.delegateView = self
         
         self.title = "Carros"
         let rightButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(navigateToRegister))
@@ -34,10 +38,7 @@ class CarViewController: UIViewController {
     }
 
     @objc func navigateToRegister() {
-        let viewController = RegisterCarViewController.instantiate()
-        viewController.delegate = self
-
-        navigationController?.pushViewController(viewController, animated: true)
+        viewModel.registerCar()
     }
     
     private func reloadData() {
@@ -67,14 +68,8 @@ extension CarViewController: UITableViewDelegate, UITableViewDataSource {
 
 }
 
-extension CarViewController: RegisterCarViewControllerDelegate {
-
-    func didFinishRegister() {
+extension CarViewController: CarViewModelViewDelegate {
+    func carViewModelViewRefreshList() {
         reloadData()
     }
-
-    func add(_ car: Car) {
-        viewModel.cars.append(car)
-    }
 }
-

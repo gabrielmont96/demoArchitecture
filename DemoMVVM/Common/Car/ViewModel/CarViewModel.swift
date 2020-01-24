@@ -8,7 +8,19 @@
 
 import Foundation
 
+protocol CarViewModelDelegate: AnyObject {
+    func carViewModelDidSelectRegister(_ carViewModel: CarViewModel)
+    func carViewModelDidSelectRegisterConfirm(_ carViewModel: CarViewModel)
+}
+
+protocol CarViewModelViewDelegate: AnyObject {
+    func carViewModelViewRefreshList()
+}
+
 class CarViewModel {
+    
+    weak var delegate: CarViewModelDelegate?
+    weak var delegateView: CarViewModelViewDelegate?
     var cars: [Car] = []
 
     init() {
@@ -26,5 +38,15 @@ class CarViewModel {
         ]
 
         self.cars.append(contentsOf: cars)
+    }
+    
+    func registerCar() {
+        delegate?.carViewModelDidSelectRegister(self)
+    }
+    
+    func addCar(with car: Car) {
+        cars.append(car)
+        delegateView?.carViewModelViewRefreshList()
+        delegate?.carViewModelDidSelectRegisterConfirm(self)
     }
 }
