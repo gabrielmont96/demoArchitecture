@@ -30,9 +30,16 @@ class CarCoordinator: Coordinator {
 }
 
 extension CarCoordinator: CarViewModelDelegate {
+
+    func carViewModelDidTapDetail(_ carViewModel: CarViewModel, car: Car) {
+        let viewModel = CarDetailViewModel(car)
+        view = CarDetailViewController(viewModel: viewModel)
+        navigation?.pushViewController(view!, animated: true)
+    }
+
     func carViewModelDidSelectRegister(_ carViewModel: CarViewModel) {
         view = RegisterCarViewController(viewModel: viewModel)
-        navigation?.pushViewController(view!, animated: false)
+        navigation?.pushViewController(view!, animated: true)
     }
     
     func carViewModelDidSelectRegisterConfirm(_ carViewModel: CarViewModel) {

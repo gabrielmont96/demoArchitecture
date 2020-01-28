@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53A57E2C23E0CC8800D253E6 /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A57E2A23E0CC8800D253E6 /* CarDetailViewController.swift */; };
+		53A57E2D23E0CC8800D253E6 /* CarDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A57E2B23E0CC8800D253E6 /* CarDetailViewController.xib */; };
+		53A57E2F23E0CCA900D253E6 /* CarDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A57E2E23E0CCA900D253E6 /* CarDetailViewModel.swift */; };
 		53F607B023D6281600F6027F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F607AF23D6281600F6027F /* AppDelegate.swift */; };
 		53F607B223D6281600F6027F /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F607B123D6281600F6027F /* CarViewController.swift */; };
 		53F607B723D6281800F6027F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F607B623D6281800F6027F /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		53A57E2A23E0CC8800D253E6 /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
+		53A57E2B23E0CC8800D253E6 /* CarDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailViewController.xib; sourceTree = "<group>"; };
+		53A57E2E23E0CCA900D253E6 /* CarDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewModel.swift; sourceTree = "<group>"; };
 		53F607AC23D6281600F6027F /* DemoMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F607AF23D6281600F6027F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F607B123D6281600F6027F /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53A57E2923E0CB8200D253E6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				53A57E2A23E0CC8800D253E6 /* CarDetailViewController.swift */,
+				53A57E2B23E0CC8800D253E6 /* CarDetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		53F607A323D6281600F6027F = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +162,7 @@
 		53F607DE23D62C9C00F6027F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53A57E2923E0CB8200D253E6 /* Detail */,
 				53F607B123D6281600F6027F /* CarViewController.swift */,
 				53F607E323D631DD00F6027F /* RegisterCarViewController.swift */,
 				942125A323DB4FEE00019ABB /* CarViewController.xib */,
@@ -159,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				53F607E523D646DE00F6027F /* CarViewModel.swift */,
+				53A57E2E23E0CCA900D253E6 /* CarDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,9 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				9460B3B423D884E4004E8E06 /* Coordinator */,
-				53F607DF23D62CA100F6027F /* ViewModel */,
-				53F607DE23D62C9C00F6027F /* View */,
 				53F607DD23D62C8E00F6027F /* Model */,
+				53F607DE23D62C9C00F6027F /* View */,
+				53F607DF23D62CA100F6027F /* ViewModel */,
 			);
 			path = Car;
 			sourceTree = "<group>";
@@ -212,7 +229,7 @@
 		9460B3C223D88B6B004E8E06 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				9460B3C623D88B81004E8E06 /* Coodrinator */,
+				9460B3C623D88B81004E8E06 /* Coordinator */,
 				9460B3C523D88B7A004E8E06 /* Model */,
 				9460B3C423D88B74004E8E06 /* View */,
 				9460B3C323D88B70004E8E06 /* ViewModel */,
@@ -244,12 +261,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9460B3C623D88B81004E8E06 /* Coodrinator */ = {
+		9460B3C623D88B81004E8E06 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				9460B3C723D88B8F004E8E06 /* LoginCoordinator.swift */,
 			);
-			path = Coodrinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A57E2D23E0CC8800D253E6 /* CarDetailViewController.xib in Resources */,
 				9460B3CC23D88BE2004E8E06 /* LoginViewController.xib in Resources */,
 				53F607BA23D6281800F6027F /* LaunchScreen.storyboard in Resources */,
 				53F607B723D6281800F6027F /* Assets.xcassets in Resources */,
@@ -385,7 +403,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A57E2F23E0CCA900D253E6 /* CarDetailViewModel.swift in Sources */,
 				9460B3B923D8878E004E8E06 /* AppCoordinator.swift in Sources */,
+				53A57E2C23E0CC8800D253E6 /* CarDetailViewController.swift in Sources */,
 				9460B3BD23D8891A004E8E06 /* CarCoordinator.swift in Sources */,
 				9460B3C823D88B8F004E8E06 /* LoginCoordinator.swift in Sources */,
 				53F607B223D6281600F6027F /* CarViewController.swift in Sources */,

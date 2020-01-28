@@ -58,6 +58,11 @@ extension CarViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = "\(viewModel.cars[indexPath.row].model) - \(viewModel.cars[indexPath.row].brand)"
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let car = viewModel.getCar(at: indexPath)
+        viewModel.showDetail(with: car)
+    }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

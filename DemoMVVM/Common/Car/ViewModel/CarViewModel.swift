@@ -11,6 +11,7 @@ import Foundation
 protocol CarViewModelDelegate: AnyObject {
     func carViewModelDidSelectRegister(_ carViewModel: CarViewModel)
     func carViewModelDidSelectRegisterConfirm(_ carViewModel: CarViewModel)
+    func carViewModelDidTapDetail(_ carViewModel: CarViewModel, car: Car)
 }
 
 protocol CarViewModelViewDelegate: AnyObject {
@@ -42,6 +43,14 @@ class CarViewModel {
     
     func registerCar() {
         delegate?.carViewModelDidSelectRegister(self)
+    }
+
+    func showDetail(with car: Car) {
+        delegate?.carViewModelDidTapDetail(self, car: car)
+    }
+
+    func getCar(at indexPath: IndexPath) -> Car {
+        return cars[indexPath.row]
     }
     
     func addCar(with car: Car) {
