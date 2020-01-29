@@ -15,4 +15,6 @@ protocol BaseCoordinator: AnyObject {
     var navigation: UINavigationController? { get set }
     
     func start() -> UIViewController
+    
+    func stop()
 }

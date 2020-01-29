@@ -27,6 +27,11 @@ class AppCoordinator: Coordinator {
         }
     }
     
+    func stop() {
+        carCoordinator = nil
+        loginCoordinator = nil
+    }
+    
     func showCars() {
         carCoordinator = CarCoordinator(window: window)
         carCoordinator?.start()

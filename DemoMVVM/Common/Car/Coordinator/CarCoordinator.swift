@@ -27,6 +27,12 @@ class CarCoordinator: Coordinator {
         navigation = UINavigationController(rootViewController: view!)
         window.rootViewController = navigation
     }
+    
+    func stop() {
+        view = nil
+        navigation = nil
+        viewModel = nil
+    }
 }
 
 extension CarCoordinator: CarViewModelDelegate {
