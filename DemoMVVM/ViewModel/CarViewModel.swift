@@ -8,8 +8,13 @@
 
 import Foundation
 
+protocol CarViewModelDelegate: AnyObject {
+    func didFinishRegister()
+}
+
 class CarViewModel {
     var cars: [Car] = []
+    weak var delegate: CarViewModelDelegate?
 
     init() {
         initCarList()
@@ -26,5 +31,13 @@ class CarViewModel {
         ]
 
         self.cars.append(contentsOf: cars)
+    }
+    
+    func add(car: Car) {
+        cars.append(car)
+    }
+    
+    func refreshList() {
+        delegate?.didFinishRegister()
     }
 }

@@ -8,14 +8,9 @@
 
 import UIKit
 
-protocol RegisterCarViewControllerDelegate: AnyObject {
-    func add(_ car: Car)
-    func didFinishRegister()
-}
-
 class RegisterCarViewController: UIViewController {
-
-    weak var delegate: RegisterCarViewControllerDelegate?
+    
+    var viewModel: CarViewModel?
 
     @IBOutlet weak var modelTextField: UITextField!
     @IBOutlet weak var brandTextField: UITextField!
@@ -33,8 +28,8 @@ class RegisterCarViewController: UIViewController {
 
     @IBAction func didTapSave(_ sender: Any) {
         let car = Car(model: modelTextField.text ?? "", brand: brandTextField.text ?? "")
-        delegate?.add(car)
-        delegate?.didFinishRegister()
+        viewModel?.add(car: car)
+        viewModel?.refreshList()
         navigationController?.popViewController(animated: true)
     }
 }

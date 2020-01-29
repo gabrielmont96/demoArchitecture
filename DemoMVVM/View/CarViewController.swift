@@ -25,6 +25,7 @@ class CarViewController: UIViewController {
     }
 
     func setup() {
+        viewModel.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -35,8 +36,7 @@ class CarViewController: UIViewController {
 
     @objc func navigateToRegister() {
         let viewController = RegisterCarViewController.instantiate()
-        viewController.delegate = self
-
+        viewController.viewModel = viewModel
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -67,7 +67,7 @@ extension CarViewController: UITableViewDelegate, UITableViewDataSource {
 
 }
 
-extension CarViewController: RegisterCarViewControllerDelegate {
+extension CarViewController: CarViewModelDelegate {
 
     func didFinishRegister() {
         reloadData()
